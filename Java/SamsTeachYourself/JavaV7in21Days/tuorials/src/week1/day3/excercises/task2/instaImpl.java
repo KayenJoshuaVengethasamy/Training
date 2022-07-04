@@ -2,7 +2,7 @@ package week1.day3.excercises.task2;
 
 public class instaImpl {
     public static void main(String[] args) {
-        //my solution is the exact same for both classes
+        //my solution is the exact same for both classes as the solution provided online
         System.out.println("My solution");
         instaClass impl = new instaClass();
         impl.depth = 1;
