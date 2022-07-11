@@ -12,7 +12,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <option name="micronaut.processing.group" value="example" />
+        <option name="micronaut.processing.group" value="example.micronaut" />
         <option name="micronaut.processing.module" value="micronautguide" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-inject-java/3.5.2/micronaut-inject-java-3.5.2.jar" />
@@ -55,7 +55,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="micronautguide" options="-parameters -Amicronaut.processing.group=example -Amicronaut.processing.module=micronautguide" />
+      <module name="micronautguide" options="-parameters -Amicronaut.processing.group=example.micronaut -Amicronaut.processing.module=micronautguide" />
     </option>
   </component>
 </project>
