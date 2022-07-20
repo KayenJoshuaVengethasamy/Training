@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5964f85-b1da-475d-8a46-da504a1a044e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/solution/NewPrimeFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/solution/NewPrimeThreads.java" afterDir="false" />
+    <list default="true" id="e5964f85-b1da-475d-8a46-da504a1a044e" name="Changes" comment="Committing from intelliJ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/GiftShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/Storefront.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task2/ZipCode.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,8 @@
     "last_opened_file_path": "C:/Training/Java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RunManager" selected="Application.NewPrimeThreads">
@@ -91,8 +85,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658321339666</updated>
-      <workItem from="1658321339878" duration="1293000" />
+      <workItem from="1658321339878" duration="2556000" />
     </task>
+    <task id="LOCAL-00001" summary="Committing from intelliJ">
+      <created>1658322731127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658322731127</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +110,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Committing from intelliJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committing from intelliJ" />
   </component>
 </project>
