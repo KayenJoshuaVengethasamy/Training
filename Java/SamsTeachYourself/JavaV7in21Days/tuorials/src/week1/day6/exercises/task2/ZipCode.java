@@ -1,4 +1,4 @@
-package week1.day6.task2;
+package week1.day6.exercises.task2;
 
 public class ZipCode {
     private String zipCode = "";
@@ -24,4 +24,5 @@ public class ZipCode {
         if (zip2.getZipCode() != "")
             System.out.println("Zip2: " + zip2.getZipCode());
     }
+
 }
