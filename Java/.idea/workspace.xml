@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5964f85-b1da-475d-8a46-da504a1a044e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/task1/za/co/ecommerce/GiftShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/exercises/task1/za/co/ecommerce/GiftShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/task1/za/co/ecommerce/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/exercises/task1/za/co/ecommerce/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/task1/za/co/ecommerce/Storefront.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/exercises/task1/za/co/ecommerce/Storefront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/task2/ZipCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day6/exercises/task2/ZipCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Training.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/solution/NewPrimeFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/solution/NewPrimeThreads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week1/day7/exercises/Task2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/GiftShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task1/za/co/ecommerce/Storefront.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Training/week1/day6/task2/ZipCode.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -27,7 +30,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CCzPv99xisShmvTRAWV6dGkCDX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +48,41 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.NewPrimeThreads">
+    <configuration name="NewPrimeThreads" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week1.day7.exercises.solution.NewPrimeThreads" />
+      <module name="Training" />
+      <option name="PROGRAM_PARAMETERS" value="-100 5.012 1000" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week1.day7.exercises.solution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week1.day7.exercises.Task2" />
+      <module name="Training" />
+      <option name="PROGRAM_PARAMETERS" value="-100 5000 5.01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week1.day7.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Task2" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,11 +91,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658321339666</updated>
-      <workItem from="1658321339878" duration="119000" />
+      <workItem from="1658321339878" duration="1293000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
