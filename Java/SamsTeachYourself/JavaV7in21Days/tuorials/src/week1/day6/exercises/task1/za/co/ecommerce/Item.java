@@ -1,6 +1,4 @@
-package week1.day6.task1.za.co.ecommerce;
-
-import com.sun.org.apache.xpath.internal.operations.Bool;
+package week1.day6.exercises.task1.za.co.ecommerce;
 
 public class Item implements Comparable{
     private String id;

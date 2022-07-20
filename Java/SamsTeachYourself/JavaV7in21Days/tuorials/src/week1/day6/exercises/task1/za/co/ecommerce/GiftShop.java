@@ -1,4 +1,4 @@
-package week1.day6.task1.za.co.ecommerce;
+package week1.day6.exercises.task1.za.co.ecommerce;
 
 public class GiftShop {
     public static void main(String[] args) {
