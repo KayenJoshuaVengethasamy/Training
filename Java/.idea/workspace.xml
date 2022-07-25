@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5964f85-b1da-475d-8a46-da504a1a044e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week2/day8/exercises/Task2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,21 +50,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.week2.day8.exercises.Task1">
-    <configuration name="CodeKeeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="week2.day8.CodeKeeper" />
-      <module name="Training" />
-      <option name="PROGRAM_PARAMETERS" value="kayen joshua vengethasamy delta alpha omega" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="week2.day8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Task2">
     <configuration name="CodeKeeper2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week2.day8.CodeKeeper2" />
       <module name="Training" />
@@ -132,6 +119,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="week2.day8.exercises.Task2" />
+      <module name="Training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week2.day8.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="week2.day8.exercises.Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week2.day8.exercises.Task1" />
       <module name="Training" />
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Task2" />
         <item itemvalue="Application.week2.day8.exercises.Task1" />
         <item itemvalue="Application.Task1" />
         <item itemvalue="Application.CodeKeeper2" />
         <item itemvalue="Application.ComicBooks" />
-        <item itemvalue="Application.CodeKeeper" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +167,8 @@
       <workItem from="1658325566527" duration="1602000" />
       <workItem from="1658386754359" duration="9729000" />
       <workItem from="1658473735589" duration="1365000" />
-      <workItem from="1658482277656" duration="2825000" />
+      <workItem from="1658482277656" duration="2826000" />
+      <workItem from="1658603871026" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="Committing from intelliJ">
       <created>1658322731127</created>
