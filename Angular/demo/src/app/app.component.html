@@ -1,0 +1,22 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="getAllProducts" routerLinkActive="active">Product List</a>
+      <a routerLink="getAllCategories" routerLinkActive="active">Category List</a>
+    </li>
+    <li>
+      <a routerLink="createProduct" routerLinkActive="active">Add Product</a>
+      <a routerLink="createCategory" routerLinkActive="active">Add Category</a>
+    </li>
+  </ul>
+</nav>
+
+  <br>
+  <h2>{{title}}</h2>
+  <hr>  
+  <router-outlet></router-outlet>
+
+<footer>
+      <span>Simple Demo</span>
+</footer>
+

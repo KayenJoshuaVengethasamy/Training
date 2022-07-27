@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5964f85-b1da-475d-8a46-da504a1a044e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SamsTeachYourself/JavaV7in21Days/tuorials/src/week2/day8/exercises/Task2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,6 +168,9 @@
       <workItem from="1658473735589" duration="1365000" />
       <workItem from="1658482277656" duration="2826000" />
       <workItem from="1658603871026" duration="1311000" />
+      <workItem from="1658744059582" duration="2988000" />
+      <workItem from="1658820124905" duration="598000" />
+      <workItem from="1658903923818" duration="130000" />
     </task>
     <task id="LOCAL-00001" summary="Committing from intelliJ">
       <created>1658322731127</created>

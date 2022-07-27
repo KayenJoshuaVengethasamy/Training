@@ -1,0 +1,8 @@
+<h3>Update Category</h3>
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <label for="categoryName">Category Name</label>
+    <input type="text" id="categoryName" required [(ngModel)]="category.categoryName" name="categoryName">
+    <button type="submit">Submit</button>
+  </form>
+</div>

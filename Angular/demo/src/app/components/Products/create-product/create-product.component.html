@@ -1,0 +1,35 @@
+
+<input type="checkbox" [formControl]="disableSelect">
+<label> Create a new category</label><br>
+<div [hidden]="disableSelect.value">
+  <h3>Create Product</h3>
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()">
+      <label for="productName">Product Name</label>
+      <input type="text" id="productName" required [(ngModel)]="product.productName" name="productName">
+      <select [(ngModel)]="product.categoryID" name="car">
+        <option *ngFor="let c of category | async" [value]="c.categoryID">
+          {{c.categoryName}}
+        </option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button (click)="newEmployee()">Add</button> -->
+</div>
+
+
+<h3>Create Category</h3>
+<div [hidden]="!disableSelect.value">
+  <form (ngSubmit)="onCategorySubmit()">
+      <label for="categoryName">Category Name</label>
+      <input type="text"  id="categoryName" required [(ngModel)]="newProductCategory.categoryName" name="categoryName">
+    <button type="submit">Submit</button>
+  </form>
+
+</div>

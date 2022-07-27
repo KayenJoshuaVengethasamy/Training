@@ -1,0 +1,19 @@
+<h2>Category List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of category | async">
+            <td>{{c.categoryName}}</td>
+            <td>
+                <button (click)="deleteCategory(c.categoryID)">Delete</button>
+                <button (click)="getCategoryByID(c.categoryID)">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
