@@ -1,0 +1,33 @@
+<section>
+  <h2>Product List</h2>
+  <div>
+    <button (click)="deleteAllProducts()">DELETE ALL!!!!</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of productList | async">
+        <th>{{ p.productName }}</th>
+        <th>{{ p.productDescription }}</th>
+        <th>{{ p.productQuantity}}</th>
+        <td>
+          <button (click)="deleteProduct(p.productID)">Delete</button>
+          <button (click)="getProductByID(p.productID)">Details</button>
+          <button (click)="updateProduct(p.productID)">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+    Product {{doThis}}
+    
+</section>

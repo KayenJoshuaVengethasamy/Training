@@ -1,0 +1,115 @@
+package com.example.demo.controller;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.model.Category;
+import com.example.demo.model.Product;
+import com.example.demo.repository.CategoryRepository;
+import com.example.demo.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/api")
+public class CategoryController {
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
+
+    @GetMapping("/categories")
+    public ResponseEntity<List<Category>> getAllCategories() {
+        List<Category> categories = new ArrayList<Category>();
+
+        categoryRepository.findAll().forEach(categories::add);
+
+        if (categories.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(categories, HttpStatus.OK);
+    }
+
+    @GetMapping("/products/{productsID}/categories")
+    public ResponseEntity<List<Category>> getAllcategoriesByProductID(@PathVariable(value = "productsID") Long productID) {
+        if (!productRepository.existsById(productID)) {
+            throw new ResourceNotFoundException("No Product with ID = " + productID);
+        }
+
+        List<Category> categories = categoryRepository.findCategoryByProducts(productID);
+        return new ResponseEntity<>(categories, HttpStatus.OK);
+    }
+
+    @GetMapping("/categories/{categoryID}")
+    public ResponseEntity<Category> getCategoriesByID(@PathVariable(value = "categoryID") Long categoryID) {
+        Category category = categoryRepository.findByCategoryID(categoryID)
+                .orElseThrow(() -> new ResourceNotFoundException("No Category with ID = " + categoryID));
+        return new ResponseEntity<>(category, HttpStatus.OK);
+    }
+
+    @GetMapping("/categories/{categoryID}/product")
+    public ResponseEntity<List<Product>> getAllProductsByCategoryID(@PathVariable(value = "categoryID") Long categoryID) {
+        if (!categoryRepository.existsByCategoryID(categoryID)) {
+            throw new ResourceNotFoundException("No Category with ID = " + categoryID);
+        }
+
+        List<Product> products = productRepository.findProductsByCategories(categoryID);
+        return new ResponseEntity<>(products, HttpStatus.OK);
+    }
+
+    @PostMapping("/products/{productsID}/categories")
+    public ResponseEntity<Category> addCategory(@PathVariable(value = "productsID") Long productID, @RequestBody Category categoryRequest) {
+        Category category = productRepository.findByProductID(productID).map(product -> {
+            long categoryRequestId = categoryRequest.getCategoryID();
+            if (categoryRequestId != 0L) {
+                Category _category = categoryRepository.findById(categoryRequestId)
+                        .orElseThrow(() -> new ResourceNotFoundException("No Category with ID = " + categoryRequestId));
+                product.addCategories(_category);
+                productRepository.save(product);
+                return _category;
+            }
+            product.addCategories(categoryRequest);
+            return categoryRepository.save(categoryRequest);
+        }).orElseThrow(() -> new ResourceNotFoundException("No Product with ID = " + productID));
+
+        return new ResponseEntity<>(category, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/categories/{categoryID}")
+    public ResponseEntity<Category> updateCategory(@PathVariable("categoryID") long categoryID, @RequestBody Category categoryRequest) {
+        Category category = categoryRepository.findByCategoryID(categoryID)
+                .orElseThrow(() -> new ResourceNotFoundException("categoryID " + categoryID + "not found"));
+
+        category.setCategoryName(categoryRequest.getCategoryName());
+
+        return new ResponseEntity<>(categoryRepository.save(category), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/product/{productID}/categories/{categoryID}")
+    public ResponseEntity<HttpStatus> deleteCategoryFromProduct(@PathVariable(value = "productID") Long productID, @PathVariable(value = "categoryID") Long categoryID) {
+        Product product = productRepository.findByProductID(productID)
+                .orElseThrow(() -> new ResourceNotFoundException("Not Product with ID = " + productID));
+
+        product.removeCategories(categoryID);
+        productRepository.save(product);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping("/categories/{categoryID}")
+    public ResponseEntity<HttpStatus> deleteCategory(@PathVariable("categoryID") long categoryID) {
+        categoryRepository.deleteByCategoryID(categoryID);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+}
