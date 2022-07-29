@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { TesterClassA } from './tester-class-a';
+import { TesterClassB } from './tester-class-b';
 
 @Injectable({
   providedIn: 'root'
@@ -8,18 +10,20 @@ import { Observable } from 'rxjs';
 export class EndpointTesterService {
 
   private productsURL = 'http://localhost:8080/demo/api/products';
+  private baseURL = 'http://localhost:8080/demo/api/';
+  private categoriesURL = 'http://localhost:8080/demo/api';
 
   constructor(private http: HttpClient) { }
 
-  getAllProducts(): Observable<any> {
-    return this.http.get(`${this.productsURL}`);
+  getAllProducts(): Observable<TesterClassA[]> {
+    return this.http.get<TesterClassA[]>(`${this.productsURL}`);
   }
 
-  getProductByID(productID: number) {
-    return this.http.get(`${this.productsURL}/${productID}`);
+  getProductByID(productID: number): Observable<TesterClassA>  {
+    return this.http.get<TesterClassA>(`${this.productsURL}/${productID}`);
   }
 
-  createProduct(product: Object): Observable<Object> {
+  createProduct(product: any): Observable<any> {
     return this.http.post(`${this.productsURL}`, product);
   }
 
@@ -28,11 +32,22 @@ export class EndpointTesterService {
   }
 
   deleteProduct(productID: number): Observable<any> {
-    return this.http.delete(`${this.productsURL}/${productID}`, { responseType: 'text' });
+    return this.http.delete(`${this.productsURL}/${productID}`);
   }
 
   deleteAllProducts(): Observable<any> {
-    return this.http.delete(`${this.productsURL}`, { responseType: 'text' });
+    return this.http.delete(`${this.productsURL}`);
+  }
+
+  getAllCategories(): Observable<TesterClassB[]> {
+    return this.http.get<TesterClassB[]>(`${this.categoriesURL}/categories`);
+  }
+
+  deleteCategory(categoryID:number):Observable<any>{
+    return this.http.delete(`${this.categoriesURL}/categories/${categoryID}`);
+  }
+
+  addCategory(productID:number, category: any): Observable<any> {
+    return this.http.post(`http://localhost:8080/demo/api/products/${productID}/categories`, category);  
   }
 }
-

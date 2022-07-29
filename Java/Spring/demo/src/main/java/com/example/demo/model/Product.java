@@ -1,9 +1,8 @@
 package com.example.demo.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
@@ -29,8 +28,8 @@ public class Product {
                     CascadeType.MERGE
             })
     @JoinTable(name = "product_categories",
-            joinColumns = { @JoinColumn(name = "product_ID") },
-            inverseJoinColumns = { @JoinColumn(name = "category_ID") })
+            joinColumns = {@JoinColumn(name = "product_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "category_ID")})
     private Set<Category> categories = new HashSet<>();
 
     public Product() {
@@ -41,6 +40,13 @@ public class Product {
         this.productName = productName;
         this.productDescription = productDescription;
         this.productQuantity = productQuantity;
+    }
+
+    public Product(String productName, String productDescription, int productQuantity, Set<Category> categories) {
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.productQuantity = productQuantity;
+        this.categories = categories;
     }
 
     public long getProductID() {

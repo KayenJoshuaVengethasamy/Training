@@ -14,11 +14,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
+@Transactional
 public class CategoryController {
 
     @Autowired
@@ -50,7 +52,7 @@ public class CategoryController {
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
-    @GetMapping("/categories/{categoryID}")
+    @GetMapping("/get/categories/{categoryID}")
     public ResponseEntity<Category> getCategoriesByID(@PathVariable(value = "categoryID") Long categoryID) {
         Category category = categoryRepository.findByCategoryID(categoryID)
                 .orElseThrow(() -> new ResourceNotFoundException("No Category with ID = " + categoryID));
@@ -66,26 +68,29 @@ public class CategoryController {
         List<Product> products = productRepository.findProductsByCategories(categoryID);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
-
+//ResponseEntity<Category>
     @PostMapping("/products/{productsID}/categories")
-    public ResponseEntity<Category> addCategory(@PathVariable(value = "productsID") Long productID, @RequestBody Category categoryRequest) {
-        Category category = productRepository.findByProductID(productID).map(product -> {
-            long categoryRequestId = categoryRequest.getCategoryID();
-            if (categoryRequestId != 0L) {
-                Category _category = categoryRepository.findById(categoryRequestId)
-                        .orElseThrow(() -> new ResourceNotFoundException("No Category with ID = " + categoryRequestId));
-                product.addCategories(_category);
-                productRepository.save(product);
-                return _category;
-            }
-            product.addCategories(categoryRequest);
-            return categoryRepository.save(categoryRequest);
-        }).orElseThrow(() -> new ResourceNotFoundException("No Product with ID = " + productID));
-
-        return new ResponseEntity<>(category, HttpStatus.CREATED);
+    public void addCategory(@PathVariable(value = "productsID") Long productID, @RequestBody Category categoryRequest) {
+//        Category category = productRepository.findByProductID(productID).map(product -> {
+//            long categoryRequestId = categoryRequest.getCategoryID();
+//            if (categoryRequestId != 0L) {
+//                Category _category = categoryRepository.findById(categoryRequestId)
+//                        .orElseThrow(() -> new ResourceNotFoundException("No Category with ID = " + categoryRequestId));
+//                product.addCategories(_category);
+//                productRepository.save(product);
+//                return _category;
+//            }
+//            product.addCategories(categoryRequest);
+//            return categoryRepository.save(categoryRequest);
+//        }).orElseThrow(() -> new ResourceNotFoundException("No Product with ID = " + productID));
+//
+//        return new ResponseEntity<>(category, HttpStatus.CREATED);
+        System.out.println("HELLO WORLD");
+        System.out.println("here is your ID : "+productID);
+        System.out.println("here is your categories : "+categoryRequest.toString());
     }
 
-    @PutMapping("/categories/{categoryID}")
+    @PutMapping("/update/categories/{categoryID}")
     public ResponseEntity<Category> updateCategory(@PathVariable("categoryID") long categoryID, @RequestBody Category categoryRequest) {
         Category category = categoryRepository.findByCategoryID(categoryID)
                 .orElseThrow(() -> new ResourceNotFoundException("categoryID " + categoryID + "not found"));
@@ -108,8 +113,12 @@ public class CategoryController {
 
     @DeleteMapping("/categories/{categoryID}")
     public ResponseEntity<HttpStatus> deleteCategory(@PathVariable("categoryID") long categoryID) {
-        categoryRepository.deleteByCategoryID(categoryID);
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try{
+            categoryRepository.deleteByCategoryID(categoryID);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }catch(Exception e){
+            System.err.println("Message: " + e.getMessage());
+            return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
+        }
     }
 }

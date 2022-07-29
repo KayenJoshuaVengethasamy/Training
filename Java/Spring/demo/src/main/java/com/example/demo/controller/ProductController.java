@@ -1,21 +1,22 @@
 package com.example.demo.controller;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.model.Product;
+import com.example.demo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.exception.ResourceNotFoundException;
-import com.example.demo.repository.ProductRepository;
+import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
+@Transactional
 public class ProductController {
 
     @Autowired
@@ -44,9 +45,11 @@ public class ProductController {
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
+
     @PostMapping("/products")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product _product = productRepository.save(new Product(product.getProductName(), product.getProductDescription(), product.getProductQuantity()));
+        System.out.println(product.toString());
         return new ResponseEntity<>(_product, HttpStatus.CREATED);
     }
 
@@ -64,9 +67,13 @@ public class ProductController {
 
     @DeleteMapping("/products/{productID}")
     public ResponseEntity<HttpStatus> deleteProduct(@PathVariable("productID") long productID) {
-        productRepository.deleteByProductID(productID);
-
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        try {
+            productRepository.deleteByProductID(productID);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            System.err.println("Message: " + e.getMessage());
+            return new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT);
+        }
     }
 
     @DeleteMapping("/products")
