@@ -1,0 +1,23 @@
+Type casting is a way to convert a value of a variable from one data type to another data type
+
+Example : 
+int AGE = 24;
+byte myAge = (byte)AGE;
+
+Java will do casting automatically if they are compatible (e.g integer type to integer type) and the target type is larger than the source type
+
+There are 2 types:
+
+1. Implicit [Automatic] casting(Widening) --preferred due to no precision lost
+(byte -> short -> int -> long) -> {float -> double}
+(8bit -> 16bit -> 32bit -> 64bit) -> {32bit -> 64bit}
+(Integer type)
+{Floating type}
+--------------------Widening-------------------->
+
+2. Explicit casting(Narrowing)
+(byte <- short <- int <- long) <- {float <- double}
+(8bit <- 16bit <- 32bit <- 64bit) <- {32bit <- 64bit}
+(Integer type)
+{Floating type}
+<------------------Narrowing--------------------

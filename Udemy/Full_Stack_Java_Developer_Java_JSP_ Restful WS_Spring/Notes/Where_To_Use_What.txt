@@ -1,0 +1,11 @@
+Double : 
+	Any general scenario where a floating point number is required
+	Any operation where output can be a floating point number
+	Any high precision is required
+Float : 
+	If there is a requirement
+Int : 
+	Any general scenario where the output will be an integer entity
+Long : 
+	Occassions where an int type is not large enough
+	
