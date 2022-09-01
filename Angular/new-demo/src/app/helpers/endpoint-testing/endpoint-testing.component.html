@@ -1,231 +1,79 @@
-<div>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div>
-      <label>Product Name</label>
-      <input
-        type="text"
-        formControlName="productName"
-        [ngClass]="{ 'is-invalid': submitted && f['productName'].errors }"
-      />
-      <div *ngIf="submitted && f['productName'].errors">
-        <div *ngIf="f['productName'].errors['required']">productName is required</div>
-      </div>
-    </div>
-    <div>
-      <label>Product Description</label>
-      <input
-        type="text"
-        formControlName="productDescription"
-        [ngClass]="{ 'is-invalid': submitted && f['productDescription'].errors }"
-      />
-      <div *ngIf="submitted && f['productDescription'].errors">
-        <div *ngIf="f['productDescription'].errors['required']">Fullname is required</div>
-      </div>
-    </div>
-    <div>
-      <label>Product quantity</label>
-      <input
-        type="number"
-        formControlName="productQuantity"
-        [ngClass]="{ 'is-invalid': submitted && f['productQuantity'].errors }"
-      />
-      <div *ngIf="submitted && f['productQuantity'].errors">
-        <div *ngIf="f['productQuantity'].errors['required']">Fullname is required</div>
-      </div>
-    </div>
-    <div *ngFor="let c of categoryItems">
-      {{c.categoryName}}
-      <input
-        type="checkbox"
-        formControlName="categories"
-        [(ngModel)]="c.checked"
-        [ngClass]="{ 'is-invalid': submitted && f['categories'].errors }"
-      />
-      <div *ngIf="submitted && f['categories'].errors">
-        category is required
-      </div>
-    </div>
-
-    <div>
-      <button type="submit">Add PRoduct</button>
-      <button type="button" (click)="onReset()">Reset</button>
-    </div>
-  </form>
+<div *ngIf="isSignedUp; else register">
+  YOU HAVE ALREADY REGISTERED. PLEASE LOGIN
 </div>
-<!-- <h1>
-  Dynamic Checkbox List Example
-</h1>
-<ul>
-  <li *ngFor="let c of categoryItems">
-    <input type="checkbox" [(ngModel)]="c.checked" />
-    <label>{{c.categoryName}}</label>
-  </li>
-</ul>
+<ng-template #register>
+  <div class="container-fluid">
+    <div *ngIf="!progressing">
+      <form
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Product Name : </mat-label>
+          <input
+            matInput
+            type="text"
+            name="productName"
+            [(ngModel)]="form.productName"
+            #productName="ngModel"
+            required
+          /> </mat-form-field
+        >&nbsp;
 
-And the select Object is
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Description : </mat-label>
+          <input
+            matInput
+            type="text"
+            name="productDescription"
+            [(ngModel)]="form.productDescription"
+            #productDescription="ngModel"
+            required
+          /> </mat-form-field
+        >&nbsp;
 
-<pre>{{this.selectedCheckboxList | json}}</pre> -->
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Price : R</mat-label>
+          <input
+            matInput
+            type="number"
+            name="productPrice"
+            [(ngModel)]="form.productPrice"
+            #productPrice="ngModel"
+            required
+          />
+        </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
 
-<!-- <form (ngSubmit)="onSubmit()">
-  <label for="productName">Product Name</label>
-  <input type="text" id="productName" required [(ngModel)]="product.productName" name="productName">
-  <div>
-  <select [(ngModel)]="product.categoryID" name="car">
-    <option *ngFor="let c of categoryList | async" [value]="c.categoryID">
-      {{c.categoryName}}
-    </option>
-  </select>
 
-  <button type="submit">Submit</button>
-</form> -->
+        <button mat-flat-button color="primary" class="example-full-width">
+          REGISTER
+        </button>
+        &nbsp;
 
-<!-- 
-  <h3>Create Product</h3>
-
-    <form (ngSubmit)="onSubmit()">
-      <label for="productName">Product Name</label>
-      <input type="text" id="productName" required [(ngModel)]="product.productName" name="productName">
-
-      <label for="productDescription">Product Description</label>
-      <input type="text" id="productDescription" required [(ngModel)]="product.productDescription" name="productDescription">
-
-      <label for="productQuantity">Product Quantity</label>
-      <input type="text" id="productQuantity" required [(ngModel)]="product.productQuantity" name="productQuantity">
-
-      <select [(ngModel)]="product.categories" name="categories">
-        <option *ngFor="let c of category | async" [value]="c.categoryID">
-          {{c.categoryName}}
-        </option>
-      </select>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    {{message}}
-
-<section>
-  <h2>Categories List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let c of category | async">
-        <th>{{ c.categoryID }}</th>
-        <th>{{ c.categoryName }}</th>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h2>Product List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of products | async">
-        <th>{{ p.productName }}</th>
-        <th>{{ p.productDescription }}</th>
-        <th>{{ p.productQuantity }}</th>
-        <td>
-          <button (click)="deleteProduct(p.productID)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h2>Product List</h2>
-  <div>
-    <button (click)="deleteAllProducts()">DELETE ALL!!!!</button>
+        <div
+          class="example-full-width alert alert-warning"
+          role="alert"
+          *ngIf="f.submitted && isSignUpFailed"
+        >
+          Product FAILED {{ errorMessage }}
+        </div>
+      </form>
+    </div>
+    <div *ngIf="progressing">
+      <mat-progress-bar mode="buffer"></mat-progress-bar>
+    </div>
   </div>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of productList | async">
-        <th>{{ p.productName }}</th>
-        <th>{{ p.productDescription }}</th>
-        <th>{{ p.productQuantity }}</th>
-        <td>
-          <button (click)="deleteProduct(p.productID)">Delete</button>
-          <button (click)="getProductByID(p.productID)">Info</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+</ng-template>
 
-<section>
-  Product {{ doThis }}
-  <div *ngIf="productDetails">
-
-      <label><b>Product Name: </b></label> {{ productDetails.productName }}
-      <label><b>Product Description: </b></label>
-      {{ productDetails.productDescription }}
-      <label><b>Product Quantity: </b></label>
-      {{ productDetails.productQuantity }}
-
-
-      <form (ngSubmit)="onUpdate()">
-
-        <label for="productName">Product Name</label>
-        <input type="text" id="productName" required [(ngModel)]="productUpdate.productName" name="productName">
-
-        <label for="productDescription">Product Description</label>
-        <input type="text" id="productDescription" required [(ngModel)]="productUpdate.productDescription" name="productDescription">
-
-        <label for="productQuantity">Product Price</label>
-        <input type="text" id="productQuantity" required [(ngModel)]="productUpdate.productQuantity" name="productQuantity">
-  
-      <button type="submit" >Submit</button>
-    </form>
-    </div>
-</section>
-
-<section>
-  <h1>CREATE A PRODUCT!</h1>
-  <form (ngSubmit)="onCreate()">
-
-    <label for="productName">Product Name</label>
-    <input type="text" id="productName" required [(ngModel)]="productUpdate.productName" name="productName">
-
-    <label for="productDescription">Product Description</label>
-    <input type="text" id="productDescription" required [(ngModel)]="productUpdate.productDescription" name="productDescription">
-
-    <label for="productQuantity">Product Price</label>
-    <input type="text" id="productQuantity" required [(ngModel)]="productUpdate.productQuantity" name="productQuantity">
-
-  <button type="submit" >Submit</button>
-</form>
-</section>
-<div *ngIf="!submitted">
-      <label for="productName">Product Name</label>
-      <input type="text" id="productName" required [(ngModel)]="product.productName" name="productName">
-  
-      <label for="productDescription">Product Description</label>
-      <input type="text" id="productDescription" required [(ngModel)]="product.productDescription" name="productDescription">
-  
-      <label for="productQuantity">Product Price</label>
-      <input type="text" id="productQuantity" required [(ngModel)]="product.productQuantity" name="productQuantity">
-
-      <button (click)="saveProduct()">Submit</button>
-    </div>
-
-    <div *ngIf="submitted">
-      <h4>Product was submitted successfully!</h4>
-      <button (click)="newProduct()">Add NEW</button>
-    </div> -->
+<p>You selected: {{selected}}</p>

@@ -20,7 +20,7 @@ public class Product {
     private String productDescription;
 
     @Column(name = "product_price")
-    private int productQuantity;
+    private int productPrice;
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
@@ -36,16 +36,16 @@ public class Product {
 
     }
 
-    public Product(String productName, String productDescription, int productQuantity) {
+    public Product(String productName, String productDescription, int productPrice) {
         this.productName = productName;
         this.productDescription = productDescription;
-        this.productQuantity = productQuantity;
+        this.productPrice = productPrice;
     }
 
-    public Product(String productName, String productDescription, int productQuantity, Set<Category> categories) {
+    public Product(String productName, String productDescription, int productPrice, Set<Category> categories) {
         this.productName = productName;
         this.productDescription = productDescription;
-        this.productQuantity = productQuantity;
+        this.productPrice = productPrice;
         this.categories = categories;
     }
 
@@ -73,12 +73,12 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public int getProductQuantity() {
-        return productQuantity;
+    public int getProductPrice() {
+        return productPrice;
     }
 
-    public void setProductQuantity(int productQuantity) {
-        this.productQuantity = productQuantity;
+    public void setProductPrice(int productQuantity) {
+        this.productPrice = productQuantity;
     }
 
     public Set<Category> getCategories() {
@@ -108,7 +108,7 @@ public class Product {
                 "productID=" + productID +
                 ", productName='" + productName + '\'' +
                 ", productDescription='" + productDescription + '\'' +
-                ", productQuantity=" + productQuantity +
+                ", productQuantity=" + productPrice +
                 ", categories=" + categories +
                 '}';
     }

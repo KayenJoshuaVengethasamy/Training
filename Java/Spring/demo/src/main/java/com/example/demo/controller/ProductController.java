@@ -15,14 +15,14 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/products/")
 @Transactional
 public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
 
-    @GetMapping("/products")
+    @GetMapping("getAllProducts")
     public ResponseEntity<List<Product>> getAllProducts(@RequestParam(required = false) String productName) {
         List<Product> products = new ArrayList<Product>();
 
@@ -48,7 +48,7 @@ public class ProductController {
 
     @PostMapping("/products")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-        Product _product = productRepository.save(new Product(product.getProductName(), product.getProductDescription(), product.getProductQuantity()));
+        Product _product = productRepository.save(new Product(product.getProductName(), product.getProductDescription(), product.getProductPrice()));
         System.out.println(product.toString());
         return new ResponseEntity<>(_product, HttpStatus.CREATED);
     }
@@ -60,7 +60,7 @@ public class ProductController {
 
         _product.setProductName(product.getProductName());
         _product.setProductDescription(product.getProductDescription());
-        _product.setProductQuantity(product.getProductQuantity());
+        _product.setProductPrice(product.getProductPrice());
 
         return new ResponseEntity<>(productRepository.save(_product), HttpStatus.OK);
     }

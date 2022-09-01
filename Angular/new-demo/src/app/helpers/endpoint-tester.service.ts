@@ -11,12 +11,18 @@ export class EndpointTesterService {
 
   private productsURL = 'http://localhost:8080/demo/api/products';
   private baseURL = 'http://localhost:8080/demo/api/';
-  private categoriesURL = 'http://localhost:8080/demo/api';
+  private categoriesURL = 'http://localhost:8080/demo/api/categories';
+  private testURL = 'http://localhost:8080/demo/api/testing';
 
   constructor(private http: HttpClient) { }
 
+
+  registerProduct(info: TesterClassA): Observable<any> {
+      return this.http.post<any>(`${this.testURL}/registerProduct`, info);
+    }
+  
   getAllProducts(): Observable<TesterClassA[]> {
-    return this.http.get<TesterClassA[]>(`${this.productsURL}`);
+    return this.http.get<TesterClassA[]>(`${this.productsURL}/getAllProducts`);
   }
 
   getProductByID(productID: number): Observable<TesterClassA>  {
@@ -40,14 +46,19 @@ export class EndpointTesterService {
   }
 
   getAllCategories(): Observable<TesterClassB[]> {
-    return this.http.get<TesterClassB[]>(`${this.categoriesURL}/categories`);
+    return this.http.get<TesterClassB[]>(`${this.categoriesURL}/getAllCategories`);
   }
 
   deleteCategory(categoryID:number):Observable<any>{
     return this.http.delete(`${this.categoriesURL}/categories/${categoryID}`);
   }
 
-  addCategory(productID:number, category: any): Observable<any> {
-    return this.http.post(`http://localhost:8080/demo/api/products/${productID}/categories`, category);  
+  addCategory(productID:number, categoryID: number, category:any): Observable<any> {
+    return this.http.post(`${this.categoriesURL}/categories/${productID}/${categoryID }`, null);  
+  }
+
+  getAllcategoriesByProductID(productsID:number): Observable<TesterClassB[]> {
+    return this.http.get<TesterClassB[]>(`${this.categoriesURL}/getAllcategoriesByProductID/${productsID}`);
+
   }
 }

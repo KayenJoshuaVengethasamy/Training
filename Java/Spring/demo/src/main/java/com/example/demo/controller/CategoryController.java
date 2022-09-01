@@ -19,7 +19,7 @@ import javax.transaction.Transactional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/categories/")
 @Transactional
 public class CategoryController {
 
@@ -29,7 +29,7 @@ public class CategoryController {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    @GetMapping("/categories")
+    @GetMapping("getAllCategories")
     public ResponseEntity<List<Category>> getAllCategories() {
         List<Category> categories = new ArrayList<Category>();
 
@@ -42,7 +42,7 @@ public class CategoryController {
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
-    @GetMapping("/products/{productsID}/categories")
+    @GetMapping("getAllcategoriesByProductID/{productsID}")
     public ResponseEntity<List<Category>> getAllcategoriesByProductID(@PathVariable(value = "productsID") Long productID) {
         if (!productRepository.existsById(productID)) {
             throw new ResourceNotFoundException("No Product with ID = " + productID);
