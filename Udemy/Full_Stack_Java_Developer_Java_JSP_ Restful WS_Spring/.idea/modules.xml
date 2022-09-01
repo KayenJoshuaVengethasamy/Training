@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lessons/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" filepath="$PROJECT_DIR$/Lessons/.metadata/.plugins/org.eclipse.egit.core/.org.eclipse.egit.core.cmp/.org.eclipse.egit.core.cmp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/Demo1/Demo1.iml" filepath="$PROJECT_DIR$/Lessons/Demo1/Demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L02_Hello_World/S03L02_Hello_World.iml" filepath="$PROJECT_DIR$/Lessons/S03L02_Hello_World/S03L02_Hello_World.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L04_Understanding_Variables/S03L04_Understanding_Variables.iml" filepath="$PROJECT_DIR$/Lessons/S03L04_Understanding_Variables/S03L04_Understanding_Variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L05_Primitive_Data_Types/S03L05_Primitive_Data_Types.iml" filepath="$PROJECT_DIR$/Lessons/S03L05_Primitive_Data_Types/S03L05_Primitive_Data_Types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L06_Primitive_Data_Types_Floating_Point_Data_Type/S03L06_Primitive_Data_Types_Floating_Point_Data_Type.iml" filepath="$PROJECT_DIR$/Lessons/S03L06_Primitive_Data_Types_Floating_Point_Data_Type/S03L06_Primitive_Data_Types_Floating_Point_Data_Type.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L07_Primitive_Data_Types_Boolean_And_Char/S03L07_Primitive_Data_Types_Boolean_And_Char.iml" filepath="$PROJECT_DIR$/Lessons/S03L07_Primitive_Data_Types_Boolean_And_Char/S03L07_Primitive_Data_Types_Boolean_And_Char.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L08_String_basics/S03L08_String_basics.iml" filepath="$PROJECT_DIR$/Lessons/S03L08_String_basics/S03L08_String_basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L09_Type_Casting/S03L09_Type_Casting.iml" filepath="$PROJECT_DIR$/Lessons/S03L09_Type_Casting/S03L09_Type_Casting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lessons/S03L11_Excercise_Solve_An_Equation/S03L11_Excercise_Solve_An_Equation.iml" filepath="$PROJECT_DIR$/Lessons/S03L11_Excercise_Solve_An_Equation/S03L11_Excercise_Solve_An_Equation.iml" />
+    </modules>
+  </component>
+</project>

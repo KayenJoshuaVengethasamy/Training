@@ -18,7 +18,7 @@ public class Hello {
 		System.out.println(var3 + var4);
 //		this will add
 		System.out.println(var3 + 20);
-//		this will add as well as well as concatenate
+//		this will add as well as concatenate
 		System.out.println(var3 + 20 + "HELLO");
 //		Whenever there are operands and one of them is a string, the other operands will be converted to a string if possible 
 //		proper way to declare a string is like this, this is because string is a class
