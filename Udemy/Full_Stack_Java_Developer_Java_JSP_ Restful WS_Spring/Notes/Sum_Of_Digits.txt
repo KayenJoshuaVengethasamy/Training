@@ -1,0 +1,13 @@
+How To Distribute
+
+Ex : 1234
+1234/10 will give 123 and remainder 4
+We want remainder
+remainder = value / 10;
+
+Steps
+
+Get remainder from the value
+Divide the value by 10 and over-write the value
+Repeat the process untill the value is less than 10
+Add the last digit to the sum of digit value
