@@ -1,0 +1,61 @@
+Statements, Code blocks
+
+Statements is a complete instruction
+in Java, statemnet ends with semi-colon;
+Code block is a set of statemnets
+in Java, code blocks is enclosed within braces{}
+
+Literals
+
+A sequence of characters that represent constant values to be stored in variables
+
+Integer literals
+
+Literals for different number systems
+Prefix 0 is used to indicate octal and prefix 0x indicates hexadecimal, 0 and 0x are literals
+Prefix 0B/0b is used for binary number systems
+eg	:	int decimal = 785;
+		int octal = 0176;
+		int hexa = 0x94;
+		int bi = 0b110;
+
+Floating-point literals
+
+Java has two kinds of floating-point numbers, float and double
+Default is double
+Literal can be used to override default
+
+eg	:	float doubleVal = 12.25D; //optional
+		float floatValue = 52.444F;
+		double floatValue = 54.963f;
+		double doubleValue = 5241.66632d; //optional
+
+Character Literals
+
+Specify a character literal for assignment of char variable
+eg	:	car x = 'v'
+		char m = 062;//ANSI equivalent of the character. Look at the ANSI chart online
+
+Escape sequence
+
+Escape or unescapes is a string removing traces of offending characters that could prevent compiling
+Research all java escape sequences but below are some examples
+eg	:	Backspace is replaced with \b
+		Newline is replaced with \n
+		Tab is replaced with \t
+		Carriage is replaced with \r
+		Form feed is replaced with \f
+		Double quote is replaced with \"
+		Backslash is replaced with \\
+
+Null Literals
+
+Null is not a keyword, null is a literal used to specify null value (nothing) for an element
+
+Boolean literals
+
+The values true and false are treated as literals in Java
+True means correct, whereas false specify incorrect
+eg	:	boolean test = true;
+
+		
