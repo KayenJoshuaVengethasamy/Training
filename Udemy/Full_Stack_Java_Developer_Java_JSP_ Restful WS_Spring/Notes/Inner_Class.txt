@@ -1,0 +1,5 @@
+Advantages Of inner Class
+1.	Better real life depiction
+2.	Inner Class could be used only by outer class
+3.	Easy access, as inner object is implicitly available inside outer object
+

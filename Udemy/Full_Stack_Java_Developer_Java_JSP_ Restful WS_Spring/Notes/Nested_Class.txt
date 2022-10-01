@@ -1,0 +1,10 @@
+Nested Class
+	Static Nested Class		--	No static class needs to be accessed through an object or an instance. We can directly access the elements inside a static class
+	Non-Static Nested Class	--	Known as inner class due to the face that the instance is inside an instance		
+		Member inner class
+			We have non static class inside a non static class
+		Local inner class
+			A class that is inside a scope of a block, which could be a method. Limited to the scope
+		anonymous inner class
+			a nameless class inside a class. There is no name to this class. Because there is no name, we can only use it once inits lifetime
+		

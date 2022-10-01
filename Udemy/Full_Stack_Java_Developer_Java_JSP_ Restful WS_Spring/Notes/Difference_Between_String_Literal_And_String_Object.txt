@@ -1,0 +1,21 @@
+-String literal
+	String str1 = "Hello World!!";
+		This will be stored in a heap of memory
+		a entrance will be located and stored on a stack. This is called a reference. eg123
+		This reference is where java will access it from the heap
+	String str2 = "Hello World!!";
+		The data of both of these are the exact same, however java will handle it
+		Java will first check if the same data is in the heap or not
+		if the same data exists, then it will not create a new reference, it will use the same reference(123)
+		java will optimise and refer to the same memory location
+		java will create a new reference only if the data is different
+	Therefore : str1 == str2 will result in true;
+-String object
+	String str3 = new String("Hello World!!");
+		This is the new notation and creating an object of the string type
+		because we are creating a new object, a new reference will be created eg456
+	String str4 = new String("Hello World!!");	
+		because we are creating a new object, a new reference will be created, even though it is the same value eg789
+	Therefore : str3 == str4 will result in false;
+	This is why we use the .equals() method, as it will compare the data of the object and not check the reference
+	

@@ -1,0 +1,32 @@
+Types
+
+Private
+	-	Accessible only within the class
+	-	Same Class
+Default
+	-	No modifier is treated as default modifier. The default modifier is accessible only within the package
+	-	Same Class
+	-	Same package
+		Sub-class (Child class or inheritance)
+	-	Same package
+		Non-sub class
+Protected
+	-	Accessible both within and outside the package but through inheritance only
+	-	Same Class
+	-	Same package
+		Sub-class (Child class or inheritance)
+	-	Same package
+		Non-sub class
+	-	Different package
+	-	Sub-class
+Public
+	-	Access to all
+	-	Same Class
+	-	Same package
+		Sub-class (Child class or inheritance)
+	-	Same package
+		Non-sub class
+	-	Different package
+		Sub-class
+	-	Different package
+		Non-Sub class
