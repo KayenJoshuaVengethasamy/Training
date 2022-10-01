@@ -17,5 +17,14 @@
 	String str4 = new String("Hello World!!");	
 		because we are creating a new object, a new reference will be created, even though it is the same value eg789
 	Therefore : str3 == str4 will result in false;
-	This is why we use the .equals() method, as it will compare the data of the object and not check the reference
+	This is why we use the .equals() method, as it will compare the data of the object and not check the reference only
+	
+WHAT TO DO?
+Recommendation
+	-Use String literals usually(it enables compiler optimization)
+		String str1 = "Hello World!!";
+	-Use .equals method for string comparisons
+
+	
+	
 	
