@@ -1,0 +1,15 @@
+What is Collections in Java?
+The Java Collections Framework is a collection of interfaces and classes which make it easier for storing and processing collection of objects efficiently
+Collection
+	Set
+		Sorted List
+	List
+	Queue
+	Deque
+Map
+	SortedMap
+
+Advantages
+	1. No third party API is required
+	2. No need to create API from handling collections objects
+	3. Collections framework is tested and optimised

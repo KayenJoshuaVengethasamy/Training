@@ -1,0 +1,19 @@
+ArrayList
+	Pros
+		Fast
+		Easy to access any element from any location
+	Cons
+		Operations are slow
+		Tends to use more memory while operating
+
+Stack
+	The stack class represents a last-in-first out (LIFO) stack of objects
+	It extends class vector
+	Vector is similar to ArrayList. Difference being is that Vector methods are synchronized, wheareas ArrayList methods are not
+	Methods
+		empty()				--	Tests if the stack is empty
+		peek()				--	Looks at the object at the top of this stack without removing it from the stack
+		pop()				--	Removes the object at the top of this stack and returns that object as the value of this function
+		push(E item)		--	Pushes an item onto the top of this stack
+		search(Object o)	--	Returns the 1-based position where an object is on this stack
+		
