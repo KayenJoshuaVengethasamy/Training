@@ -1,0 +1,6 @@
+Generics
+	Generics are a facility of generic programming that were aded to Java in 2004 within version J2SE 5.0
+	Advantages
+		1.	Reusability
+		2.	Stronger type checking, better type safety (Reduces run time error)
+		3.	Eliminate type casting statements (Improve program's performance)
