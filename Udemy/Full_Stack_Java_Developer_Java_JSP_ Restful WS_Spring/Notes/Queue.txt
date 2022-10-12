@@ -1,0 +1,16 @@
+<---------------------------
+FRONT	--	--	--	--	Rear
+^						^
+|						|
+Remove					Add
+First In First Out (FIFO)
+
+Types(High-Level)
+	Array backed Queue
+		Implemented using array in the background by java
+	LinkedList backed Queue
+		Where a linked list is used to save the information in the background by java
+	Blocking Queue
+		Blocks any null values from being added to a queue
+	Priority Queue
+		Where elements are arranged either by natural or comparable interface

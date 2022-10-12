@@ -1,0 +1,15 @@
+HashSet
+	Does not guarantee any order
+	Allows one null key
+	Fastest for common operation eg : Add, search, remove
+	
+LinkedHashSet
+	Keep elements in the order they are added
+	Allows one null key
+	Slower than hashset but faster than TreeSet
+	
+TreeSet
+	Sorts All Objects
+	Doesn't allow null keys
+	Much slower as it needs to perform sorting
+	
