@@ -119,7 +119,7 @@ public class App {
 		}
 //		binarySearch is not able to search if we do not implement the comparable interface
 		System.out.println("Binary search : " + Collections.binarySearch(list2, new Name("Ciaz")));
-		System.out.println("Validate binary search : " + list2.get(-9));
+		System.out.println("Validate binary search : " + list2.get(0));
 		System.out.println("**************************************************************");
 	}
 
