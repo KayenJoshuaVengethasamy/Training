@@ -1,0 +1,8 @@
+Streams are automatically created for us. They are attached to the console
+
+These are all streams
+
+1.	System.out	->	output stream
+2.	System.in	->	input stream
+3.	System.err	->	error stream
+

@@ -1,0 +1,11 @@
+BufferedReader class
+	Synchronous
+	Should be used in multiple threaded application
+	Large buffer(8KB byte buffer)
+	Slightly faster as it simply reads sequence of characters
+Scanner
+	Not synchronous
+	Should be avoided in multiple threaded application
+	Small buffer (1KB char buffer)
+	Slower as it does parsing of input data
+	Preferred when we take user input for small operations
