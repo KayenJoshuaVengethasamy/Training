@@ -1,0 +1,9 @@
+Features
+	Version Control
+	Merge
+	Branch
+	Push
+		Upload the updates on remote respository
+	Pull
+		Download the updates on remote repository
+	Helps in resolving conflicts

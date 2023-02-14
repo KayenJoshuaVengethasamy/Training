@@ -1,0 +1,9 @@
+GIT was created by Linus Torvalds in 2005. He has also developed and is a founder member of the linux kernel
+It is used to manage a project with multiple contributors
+It helps with distrubuted version control systems
+GIT handles
+	Version control
+	Merging projects
+	Pushing and pulling projects
+	Contribution from other team members
+	Resolving conflicts
