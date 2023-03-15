@@ -1,0 +1,12 @@
+Model View Controller
+	Why MVC
+		Code usability/reuse
+			reduces effort
+		Separation of concern
+	What is MVC
+		Controller
+			Responsible for the business logic
+		View
+			The UI, the frontent
+		Model
+			Deals with DB operations/backend

@@ -1,0 +1,9 @@
+Servlet Container
+	Web App
+		Servlet
+			Load servlet Class
+			Create instance of servlet
+			call the servlets init() method
+			Call the servlets service() method
+			call the servlets destroy() method
+			

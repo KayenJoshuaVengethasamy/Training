@@ -1,0 +1,6 @@
+Scripting Element	->	Syntax				->	Example
+Expression			->	<%= expression %>	->	<%= 2*5 %>
+Scriptlet			->	<% scriptlets %>	->	<% out.println("Hello World"); %>
+Declaration			->	<%! declarations %>	->	<%! public int count = 0; %>
+Directive			->	<%@ directive %>	->	<%@ page ... %>
+Comment				->	<%--comment--%>		->	<%-- JSP comment --%>
