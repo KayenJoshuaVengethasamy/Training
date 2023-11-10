@@ -1,0 +1,6 @@
+Why cookie
+	To personalize website experience
+	Its keep track of user preferences
+What is cookie
+	A small chunk of memory in the browser for a specific website
+	Text data gets exchanged between server and browser
