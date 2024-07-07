@@ -1,0 +1,20 @@
+SECTION 2
+
+👉 IMPORTANT NOTE
+
+Starting from Spring Security 6.1 and Spring Boot 3.1.0 versions, the Spring Security framework team recommends using the Lambda DSL style for configuring security for APIs, web paths, etc.
+Consequently, they have deprecated a few methods within the framework.
+These deprecated methods are planned to be removed in Spring Security 7, which is expected to be released in the next 2-3 years.
+This timeframe allows all developers sufficient time for migrating their code.
+However, there's no need to worry as this change does not alter the underlying concepts.
+Instead of using normal Java configurations, we will now employ the Lambda DSL.
+For your reference, the code in the GitHub repository (https://github.com/eazybytes/springsecurity6) has been updated to use the Lambda DSL style. 
+The Lambda DSL was created to accomplish to following goals:
+
+    Automatic indentation makes the configuration more readable.
+    The is no need to chain configuration options using .and()
+    The Spring Security DSL has a similar configuration style to other Spring DSLs such as Spring Integration and Spring Cloud Gateway.
+
+Please refer to the following link for the official note regarding this change from the Spring Security team:
+
+https://docs.spring.io/spring-security/reference/migration-7/configuration.html
