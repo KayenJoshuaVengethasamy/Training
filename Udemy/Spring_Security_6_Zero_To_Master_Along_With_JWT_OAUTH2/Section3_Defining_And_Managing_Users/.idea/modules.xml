@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Section3_Defining_And_Managing_Users.iml" filepath="$PROJECT_DIR$/.idea/Section3_Defining_And_Managing_Users.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springsecsection3/springsecsection3.iml" filepath="$PROJECT_DIR$/springsecsection3/springsecsection3.iml" />
+    </modules>
+  </component>
+</project>
