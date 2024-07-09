@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Section3_Defining_And_Managing_Users.iml" filepath="$PROJECT_DIR$/.idea/Section3_Defining_And_Managing_Users.iml" />
       <module fileurl="file://$PROJECT_DIR$/springsecsection3/springsecsection3.iml" filepath="$PROJECT_DIR$/springsecsection3/springsecsection3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Section4_Password_Management_With_Password_Encoders/springsecsection4/springsecsection4.iml" filepath="$PROJECT_DIR$/../Section4_Password_Management_With_Password_Encoders/springsecsection4/springsecsection4.iml" />
     </modules>
   </component>
 </project>

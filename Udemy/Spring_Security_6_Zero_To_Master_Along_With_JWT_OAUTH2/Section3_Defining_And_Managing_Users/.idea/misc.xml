@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springsecsection3/pom.xml" />
+        <option value="$PROJECT_DIR$/../Section4_Password_Management_With_Password_Encoders/springsecsection4/pom.xml" />
       </list>
     </option>
   </component>
