@@ -1,0 +1,15 @@
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\bin\Debug\net8.0\StringMethods.exe
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\bin\Debug\net8.0\StringMethods.deps.json
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\bin\Debug\net8.0\StringMethods.runtimeconfig.json
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\bin\Debug\net8.0\StringMethods.dll
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\bin\Debug\net8.0\StringMethods.pdb
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.AssemblyInfoInputs.cache
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.AssemblyInfo.cs
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.csproj.CoreCompileInputs.cache
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.sourcelink.json
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.dll
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\refint\StringMethods.dll
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.pdb
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\StringMethods.genruntimeconfig.cache
+C:\Training\C#\College_Textbook\StringMethods\StringMethods\obj\Debug\net8.0\ref\StringMethods.dll

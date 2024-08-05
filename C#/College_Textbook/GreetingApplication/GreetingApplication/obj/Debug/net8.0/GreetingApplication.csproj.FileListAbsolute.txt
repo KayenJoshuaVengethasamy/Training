@@ -1,0 +1,15 @@
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\bin\Debug\net8.0\GreetingApplication.exe
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\bin\Debug\net8.0\GreetingApplication.deps.json
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\bin\Debug\net8.0\GreetingApplication.runtimeconfig.json
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\bin\Debug\net8.0\GreetingApplication.dll
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\bin\Debug\net8.0\GreetingApplication.pdb
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.AssemblyInfoInputs.cache
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.AssemblyInfo.cs
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.csproj.CoreCompileInputs.cache
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.sourcelink.json
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.dll
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\refint\GreetingApplication.dll
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.pdb
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\GreetingApplication.genruntimeconfig.cache
+C:\Training\C#\College_Textbook\GreetingApplication\GreetingApplication\obj\Debug\net8.0\ref\GreetingApplication.dll

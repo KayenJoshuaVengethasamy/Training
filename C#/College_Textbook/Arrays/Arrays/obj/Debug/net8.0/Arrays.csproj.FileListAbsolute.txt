@@ -1,0 +1,15 @@
+C:\Training\C#\College_Textbook\Arrays\Arrays\bin\Debug\net8.0\Arrays.exe
+C:\Training\C#\College_Textbook\Arrays\Arrays\bin\Debug\net8.0\Arrays.deps.json
+C:\Training\C#\College_Textbook\Arrays\Arrays\bin\Debug\net8.0\Arrays.runtimeconfig.json
+C:\Training\C#\College_Textbook\Arrays\Arrays\bin\Debug\net8.0\Arrays.dll
+C:\Training\C#\College_Textbook\Arrays\Arrays\bin\Debug\net8.0\Arrays.pdb
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.sourcelink.json
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.dll
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.pdb
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\Arrays.genruntimeconfig.cache
+C:\Training\C#\College_Textbook\Arrays\Arrays\obj\Debug\net8.0\ref\Arrays.dll
